@@ -43,7 +43,15 @@ def delete_drivers_dir():
         if os.path.exists(os.path.join(os.path.expanduser("~"), 'ssl_disabled', ROOT_FOLDER_NAME)):
             log(f"Delete {os.path.join(os.path.expanduser("~"), 'ssl_disabled')} folder")
             shutil.rmtree(os.path.join(os.path.expanduser("~"), 'ssl_disabled'))
-
+        if os.path.exists(os.path.join(os.path.expanduser("~"), 'custom-cache', ROOT_FOLDER_NAME)):
+            log(f"Delete {os.path.join(os.path.expanduser("~"), 'custom-cache')} folder")
+            shutil.rmtree(os.path.join(os.path.expanduser("~"), 'custom-cache'))
+        if os.path.exists(os.path.join(os.path.expanduser("~"), 'custom', ROOT_FOLDER_NAME)):
+            log(f"Delete {os.path.join(os.path.expanduser("~"), 'custom')} folder")
+            shutil.rmtree(os.path.join(os.path.expanduser("~"), 'custom'))
+        if os.path.exists(os.path.join(os.path.expanduser("~"), 'ssl_disabled', ROOT_FOLDER_NAME)):
+            log(f"Delete {os.path.join(os.path.expanduser("~"), 'ssl_disabled')} folder")
+            shutil.rmtree(os.path.join(os.path.expanduser("~"), 'ssl_disabled'))
     except PermissionError as e:
         print(f"Can not delete folder {e}")
 
