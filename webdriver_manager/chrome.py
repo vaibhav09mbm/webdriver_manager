@@ -9,17 +9,7 @@ from webdriver_manager.drivers.chrome import ChromeDriver
 
 
 class ChromeDriverManager(DriverManager):
-    def __init__(
-            self,
-            driver_version: Optional[str] = None,
-            name: str = "chromedriver",
-            url: str = "https://storage.googleapis.com/chrome-for-testing-public/",
-            latest_release_url: str = "https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_STABLE",
-            chrome_type: str = ChromeType.GOOGLE,
-            download_manager: Optional[DownloadManager] = None,
-            cache_manager: Optional[DriverCacheManager] = None,
-            os_system_manager: Optional[OperationSystemManager] = None
-    ):
+
         super().__init__(
             download_manager=download_manager,
             cache_manager=cache_manager,
