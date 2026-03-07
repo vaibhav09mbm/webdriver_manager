@@ -15,10 +15,7 @@ class ChromeDriverManager(DriverManager):
             name: str = "chromedriver",
             url: str = "https://storage.googleapis.com/chrome-for-testing-public/",
             latest_release_url: str = "https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_STABLE",
-            chrome_type: str = ChromeType.GOOGLE,
-            download_manager: Optional[DownloadManager] = None,
-            cache_manager: Optional[DriverCacheManager] = None,
-            os_system_manager: Optional[OperationSystemManager] = None
+      
     ):
         super().__init__(
             download_manager=download_manager,
